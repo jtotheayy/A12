@@ -17,7 +17,7 @@ $cookie = $_SESSION["cookie"];
 echo $cookie;
 ?>
 <body>
-    <form method="post" action="A12.php">
+    <form method="post" action="index.html">
         <input type="submit" value="HOME" />
     </form>
 </body>

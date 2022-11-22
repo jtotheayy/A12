@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -11,9 +12,20 @@
         <label for="cookie"><strong>Enter a data for a Cookie:</strong></label>
         <input type="text" id="cookie" name="cookie" />
         <br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" id="submit" />
     </form>
 </body>
-
-
 </html>
+<script>
+    var input = document.getElementById("cookie");
+    var submit = document.getElementById("submit");
+    submit.addEventListener("click", check);
+    function check() {
+        if (input.nodeValue.length != 0) {
+            var $cookie = input.nodeValue;
+            document.cookie = "cookie=" + $cookie;
+            aler("$cookie");
+
+        }
+    }
+</script>
